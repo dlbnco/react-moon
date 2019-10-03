@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import Moon from 'react-moon';
 
 let interval;
 
 const App = () => {
-  const [phase, setPhase] = useState(0);
+  const [phase, setPhase] = useState(0.16);
+  const [isPlaying, setPlay] = useState(false);
   const play = () => {
+    setPlay(true);
     interval = window.setInterval(() => {
       setPhase(phase => {
         const newValue = phase < 1 ? phase + 0.005 : 0;
@@ -15,6 +17,7 @@ const App = () => {
     }, 50);
   };
   const pause = () => {
+    setPlay(false);
     window.clearInterval(interval);
   };
   return (
@@ -31,8 +34,16 @@ const App = () => {
         onChange={e => setPhase(e.target.valueAsNumber)}
       />
       <div>
-        <button onClick={play}>▶️</button>
-        <button onClick={pause}>⏸️</button>
+        <button onClick={play} disabled={isPlaying}>
+          <span role="img" aria-label="Play">
+            ▶️
+          </span>
+        </button>
+        <button onClick={pause} disabled={!isPlaying}>
+          <span role="img" aria-label="Pause">
+            ⏸️
+          </span>
+        </button>
       </div>
     </div>
   );
