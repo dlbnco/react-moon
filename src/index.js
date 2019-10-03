@@ -94,7 +94,11 @@ const Moon = ({
 Moon.propTypes = {
   size: PropTypes.number,
   moon: PropTypes.object.isRequired,
-  rotation: PropTypes.number,
+  rotation: PropTypes.string,
+  darkColor: PropTypes.string,
+  lightColor: PropTypes.string,
+  phase: PropTypes.Number,
+  border: PropTypes.string,
 };
 
 Moon.defaultProps = {
@@ -102,6 +106,7 @@ Moon.defaultProps = {
   darkColor: 'black',
   lightColor: 'white',
   rotation: 0,
+  phase: 0.16,
 };
 
 export default Moon;
