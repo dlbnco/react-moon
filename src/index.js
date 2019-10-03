@@ -7,11 +7,12 @@ const Wrapper = styled.div`
   position: relative;
   transition: transform 1s;
   border-radius: 50%;
-  ${({ size, rotation, darkColor }) => css`
+  ${({ size, rotation, darkColor, border }) => css`
     background-color: ${darkColor};
     width: ${size}px;
     height: ${size}px;
-    transform: rotate(${rotation}rad);
+    transform: rotate(${rotation});
+    border: ${border};
   `}
 `;
 
@@ -57,9 +58,23 @@ const Circle = styled.div`
   border-radius: 50%;
 `;
 
-const Moon = ({ size, rotation, darkColor, lightColor, phase, ...props }) => {
+const Moon = ({
+  size,
+  rotation,
+  darkColor,
+  lightColor,
+  phase,
+  border,
+  ...props
+}) => {
   return (
-    <Wrapper darkColor={darkColor} rotation={rotation} size={size} {...props}>
+    <Wrapper
+      darkColor={darkColor}
+      rotation={rotation}
+      size={size}
+      border={border}
+      {...props}
+    >
       <Half size={size} isVisible={phase <= 0.5}>
         <Circle darkColor={darkColor} lightColor={lightColor} size={size} />
       </Half>
