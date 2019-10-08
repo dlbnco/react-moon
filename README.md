@@ -1,4 +1,4 @@
-# react-moon
+# 🌚 react-moon
 
 > Moon component for React
 
@@ -25,7 +25,7 @@ export default () => <Moon phase={0.16} size={128} />;
 
 | prop         | description                               | type   | default           |
 | ------------ | ----------------------------------------- | ------ | ----------------- |
-| `phase`      | Moon phase from 0 to 1. Full moon is 0.5. | Float  | `0.16`            |
+| `phase`      | Moon phase from 0 to 1. Full moon is 0.5. | Number  | `0.16`            |
 | `size`       | Diameter in pixels                        | Number | `80`              |
 | `lightColor` | Color of the light side                   | String | `white`           |
 | `darkColor`  | Color of the dark side                    | String | `black`           |
