@@ -15,8 +15,7 @@ npm install --save react-moon
 ## Usage
 
 ```jsx
-import React, { Component } from 'react';
-
+import React from 'react';
 import Moon from 'react-moon';
 
 export default () => <Moon phase={0.16} size={128} />;
@@ -35,7 +34,3 @@ export default () => <Moon phase={0.16} size={128} />;
 ## Known issues
 
 - Size must be static and, if bigger, the moon will overflow its container
-
-## License
-
-MIT © [dlbnco](https://github.com/dlbnco)
