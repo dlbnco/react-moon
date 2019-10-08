@@ -1,7 +1,14 @@
 body {
-  padding: 24px;
-  font-family: sans-serif;
+  max-width: 320px;
+  margin: 0 auto;
+  font-family: monospace;
   font-size: 16px;
-  background-color: darkblue;
+  background-color: #323232;
   color: white;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
 }
