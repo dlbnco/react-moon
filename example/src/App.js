@@ -5,7 +5,7 @@ import Moon from 'react-moon';
 let interval;
 
 const App = () => {
-  const [phase, setPhase] = useState(3);
+  const [phase, setPhase] = useState(0.16);
   const [isPlaying, setPlay] = useState(false);
   const play = () => {
     setPlay(true);
