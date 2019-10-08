@@ -5,7 +5,7 @@ import Moon from 'react-moon';
 let interval;
 
 const App = () => {
-  const [phase, setPhase] = useState(0.16);
+  const [phase, setPhase] = useState(3);
   const [isPlaying, setPlay] = useState(false);
   const play = () => {
     setPlay(true);
@@ -22,10 +22,12 @@ const App = () => {
   };
   return (
     <div>
+      <h1 align="center">react-moon</h1>
       <Moon size={320} phase={phase} />
       phase: {phase.toFixed(2)}
       <br />
       <input
+        style={{ width: '100%' }}
         type="range"
         min={0}
         max={1}
@@ -34,14 +36,9 @@ const App = () => {
         onChange={e => setPhase(e.target.valueAsNumber)}
       />
       <div>
-        <button onClick={play} disabled={isPlaying}>
+        <button onClick={isPlaying ? pause : play}>
           <span role="img" aria-label="Play">
-            ▶️
-          </span>
-        </button>
-        <button onClick={pause} disabled={!isPlaying}>
-          <span role="img" aria-label="Pause">
-            ⏸️
+            {isPlaying ? '⏸️' : '▶️'}
           </span>
         </button>
       </div>
