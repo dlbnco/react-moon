@@ -1,5 +1,5 @@
 body {
-  max-width: 320px;
+  max-width: 480px;
   margin: 0 auto;
   font-family: monospace;
   font-size: 16px;
@@ -8,7 +8,42 @@ body {
 }
 
 button {
-  background: none;
+  background: white;
+  border-radius: 4px;
+  padding: 8px 16px;
   border: 0;
   cursor: pointer;
+}
+
+pre {
+  padding: 16px;
+  background-color: #424242;
+}
+
+a,
+a:link {
+  text-decoration: none;
+  color: rgb(68, 188, 227);
+}
+a:hover {
+  color: rgb(60, 240, 185);
+}
+
+.moon-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 32px 0;
+}
+
+.range-slider {
+  width: 100%;
+  max-width: 512px;
+  display: block;
+  margin: 16px auto;
+}
+
+.demo-button {
+  display: block;
+  margin: 0 auto 32px;
 }

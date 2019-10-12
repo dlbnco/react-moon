@@ -23,10 +23,12 @@ const App = () => {
   return (
     <div>
       <h1 align="center">react-moon</h1>
-      <Moon size={320} phase={phase} />
-      phase: {phase.toFixed(2)}
-      <br />
+      <div className="moon-wrapper">
+        <Moon size={256} phase={phase} />
+      </div>
+      <div align="center">phase: {phase.toFixed(2)}</div>
       <input
+        className="range-slider"
         style={{ width: '100%' }}
         type="range"
         min={0}
@@ -35,12 +37,11 @@ const App = () => {
         step={0.001}
         onChange={e => setPhase(e.target.valueAsNumber)}
       />
-      <div>
-        <button onClick={isPlaying ? pause : play}>
-          <span role="img" aria-label="Play">
-            {isPlaying ? '⏸️' : '▶️'}
-          </span>
-        </button>
+      <button onClick={isPlaying ? pause : play} className="demo-button">
+        {isPlaying ? 'pause' : 'play'}
+      </button>
+      <div align="center">
+        <a href="https://github.com/dlbnco/react-moon">view on github</a>
       </div>
     </div>
   );
