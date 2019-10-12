@@ -1,6 +1,6 @@
 {
   "name": "react-moon",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Moon component for React",
   "author": "dlbnco",
   "license": "MIT",
@@ -40,6 +40,7 @@
     "eslint-config-standard-react": "^6.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-standard": "^3.1.0",
@@ -54,7 +55,6 @@
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-url": "^1.4.0",
-    "eslint-plugin-prettier": "^3.1.1",
     "styled-components": "^4.4.0"
   },
   "files": [
