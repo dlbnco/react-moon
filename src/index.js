@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   position: relative;
   transition: transform 1s;
   border-radius: 50%;
+  box-sizing: content-box;
   ${({ size, rotation, darkColor, border }) => css`
     background-color: ${darkColor};
     width: ${size}px;
