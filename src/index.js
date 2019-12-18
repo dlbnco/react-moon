@@ -76,7 +76,7 @@ const Moon = ({
       border={border}
       {...props}
     >
-      <Half size={size} isVisible={phase <= 0.5}>
+      <Half size={size} isVisible={phase >= 0.5}>
         <Circle darkColor={darkColor} lightColor={lightColor} size={size} />
       </Half>
       <Difference
@@ -85,7 +85,7 @@ const Moon = ({
         size={size}
         phase={phase}
       />
-      <Half size={size} invert isVisible={phase >= 0.5}>
+      <Half size={size} invert isVisible={phase <= 0.5}>
         <Circle darkColor={darkColor} lightColor={lightColor} size={size} />
       </Half>
     </Wrapper>
