@@ -97,7 +97,7 @@ Moon.propTypes = {
   rotation: PropTypes.string,
   darkColor: PropTypes.string,
   lightColor: PropTypes.string,
-  phase: PropTypes.Number,
+  phase: PropTypes.number,
   border: PropTypes.string,
 };
 
