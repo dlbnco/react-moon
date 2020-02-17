@@ -23,13 +23,14 @@ export default () => <Moon phase={0.16} size={128} />;
 
 ### props
 
-| prop         | description                               | type   | default           |
-| ------------ | ----------------------------------------- | ------ | ----------------- |
-| `phase`      | Moon phase from 0 to 1. Full moon is 0.5. | Number  | `0.16`            |
-| `size`       | Diameter in pixels                        | Number | `80`              |
-| `lightColor` | Color of the light side                   | String | `white`           |
-| `darkColor`  | Color of the dark side                    | String | `black`           |
-| `border`     | CSS value for border                      | String | `4px solid black` |
+| prop         | description                                                                                | type   | default           |
+| ------------ | ------------------------------------------------------------------------------------------ | ------ | ----------------- |
+| `phase`      | Moon phase from 0 to 1. Full moon is 0.5.                                                  | Number | `0.16`            |
+| `size`       | Diameter in pixels                                                                         | Number | `80`              |
+| `lightColor` | Color of the light side                                                                    | String | `white`           |
+| `darkColor`  | Color of the dark side                                                                     | String | `black`           |
+| `border`     | CSS value for border                                                                       | String | `4px solid black` |
+| `rotation`   | CSS value for rotation [\<angle\>](https://developer.mozilla.org/en-US/docs/Web/CSS/angle) | String | `0deg`            |
 
 ## Known issues
 
