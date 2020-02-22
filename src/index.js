@@ -97,7 +97,7 @@ Moon.propTypes = {
   rotation: PropTypes.string,
   darkColor: PropTypes.string,
   lightColor: PropTypes.string,
-  phase: PropTypes.Number,
+  phase: PropTypes.number,
   border: PropTypes.string,
 };
 
@@ -105,7 +105,7 @@ Moon.defaultProps = {
   size: 80,
   darkColor: 'black',
   lightColor: 'white',
-  rotation: 0,
+  rotation: '0deg',
   phase: 0.16,
   border: '4px solid black',
 };
