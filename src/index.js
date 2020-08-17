@@ -36,17 +36,19 @@ const getRotationRad = phase => {
   return rad;
 };
 
-const Difference = styled.div`
+const Difference = styled.div.attrs(({ phase, darkColor, lightColor }) => ({
+  style: {
+    background: 0.5 / getNormalizedPhase(phase) > 2 ? darkColor : lightColor,
+    transform: `translateX(-50%) rotateY(${getRotationRad(phase)}rad)`,
+  },
+}))`
   position: absolute;
   z-index: 1;
   left: 50%;
-  background: ${({ phase, darkColor, lightColor }) =>
-    0.5 / getNormalizedPhase(phase) > 2 ? darkColor : lightColor};
-  ${({ size, phase }) => css`
+  ${({ size }) => css`
     width: ${size}px;
     height: ${size}px;
     border-radius: 50%;
-    transform: translateX(-50%) rotateY(${getRotationRad(phase)}rad);
   `}
 `;
 
